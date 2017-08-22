@@ -1,4 +1,0 @@
-﻿  main.cpp
-f:\cs_ownstudy\ctci\problems\stringunique\main.cpp(33): warning C4018: '<': signed/unsigned mismatch
-  StringUnique.vcxproj -> F:\CS_OwnStudy\CTCI\Problems\Debug\StringUnique.exe
-  StringUnique.vcxproj -> F:\CS_OwnStudy\CTCI\Problems\Debug\StringUnique.pdb (Partial PDB)

@@ -1,4 +1,0 @@
-﻿  main.cpp
-f:\cs_ownstudy\ctci\problems\stringrotation\main.cpp(37): warning C4018: '<': signed/unsigned mismatch
-  StringRotation.vcxproj -> F:\CS_OwnStudy\CTCI\Problems\Debug\StringRotation.exe
-  StringRotation.vcxproj -> F:\CS_OwnStudy\CTCI\Problems\Debug\StringRotation.pdb (Partial PDB)
