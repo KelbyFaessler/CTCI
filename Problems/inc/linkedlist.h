@@ -1,5 +1,5 @@
 /*
-Define basic linked list node to use in problems.
+Define basic linked list and associated functionality to use in problems.
 */
 
 struct Node
@@ -7,4 +7,14 @@ struct Node
     int data;
     Node* prev;
     Node* next;
+
+    Node()
+    {
+        data = -1;
+    }
+
+    Node(int initData)
+    {
+        data = initData;
+    }
 };
