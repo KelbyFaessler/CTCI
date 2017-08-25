@@ -7,16 +7,43 @@
 
 #include "linkedlist.h"
 
-void RemoveDups(Node* head);
+void RemoveDups(List::Node* head);
+void OutputList(List::Node* head);
 
 int main(int argc, char* argv[])
 {
+    List::Node* head = new List::Node(0);
+    List::Node* tail = head;
+    for (int i = 1; i < 4; ++i)
+    {
+        List::Node* node = new List::Node(i);
+        List::AppendEnd(tail, node);
+    }
 
+    std::cout << "List elements before removal: ";
+    OutputList(head);
+    std::cout << std::endl;
+
+    RemoveDups(head);
+
+    std::cout << "List elements after removal: ";
+    OutputList(head);
+    std::cout << std::endl;
 
     return 0;
 }
 
-void RemoveDups(Node* head)
+void RemoveDups(List::Node* head)
 {
 
+}
+
+void OutputList(List::Node* head)
+{
+    List::Node* outputNode = head;
+    while (outputNode != nullptr)
+    {
+        std::cout << outputNode->data << " ";
+        outputNode = outputNode->next;
+    }
 }
