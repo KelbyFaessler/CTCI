@@ -4,6 +4,7 @@
 */
 
 #include <iostream>
+#include <set>
 
 #include "linkedlist.h"
 
@@ -17,7 +18,9 @@ int main(int argc, char* argv[])
     for (int i = 1; i < 4; ++i)
     {
         List::Node* node = new List::Node(i);
-        List::AppendEnd(tail, node);
+        tail = List::AppendEnd(tail, node);
+        List::Node* secondNode = new List::Node(i);
+        tail = List::AppendEnd(tail, secondNode);
     }
 
     std::cout << "List elements before removal: ";
@@ -30,12 +33,38 @@ int main(int argc, char* argv[])
     OutputList(head);
     std::cout << std::endl;
 
+    std::cin.get();
+
     return 0;
 }
 
 void RemoveDups(List::Node* head)
 {
-
+    if (head == nullptr) return;
+    std::set<int> foundDataValues;
+    List::Node* currentNode = head;
+    while (currentNode != nullptr)
+    {
+        if (foundDataValues.find(currentNode->data) != foundDataValues.end())
+        {
+            List::Node* nodeToDelete = currentNode;
+            currentNode = currentNode->next;
+            if (nodeToDelete->prev)
+            {
+                nodeToDelete->prev->next = nodeToDelete->next;
+            }
+            if (nodeToDelete->next != nullptr)
+            {
+                nodeToDelete->next->prev = nodeToDelete->prev;
+            }
+            delete nodeToDelete;
+        }
+        else
+        {
+            foundDataValues.insert(currentNode->data);
+            currentNode = currentNode->next;
+        }
+    }
 }
 
 void OutputList(List::Node* head)

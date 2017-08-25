@@ -2,6 +2,9 @@
 Define basic linked list and associated functionality to use in problems.
 */
 
+namespace List
+{
+
 struct Node
 {
     int data;
@@ -22,10 +25,13 @@ struct Node
 //-----------------------------------------------------------------------------
 //Given the tail of a list, append a Node to the tail that becomes the new
 //new tail. Returns the new tail of the list.
-Node* ListAppendEnd(Node* tail, Node* newNode)
+Node* AppendEnd(Node* tail, Node* newNode)
 {
     tail->next = newNode;
     newNode->prev = tail;
     newNode->next = nullptr;
     return newNode;
 }
+
+
+} //End namespace List
