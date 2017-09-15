@@ -9,7 +9,6 @@
 #include "linkedlist.h"
 
 void RemoveDups(List::Node* head);
-void OutputList(List::Node* head);
 
 int main(int argc, char* argv[])
 {
@@ -24,13 +23,13 @@ int main(int argc, char* argv[])
     }
 
     std::cout << "List elements before removal: ";
-    OutputList(head);
+    List::OutputList(head);
     std::cout << std::endl;
 
     RemoveDups(head);
 
     std::cout << "List elements after removal: ";
-    OutputList(head);
+    List::OutputList(head);
     std::cout << std::endl;
 
     std::cin.get();
@@ -64,15 +63,5 @@ void RemoveDups(List::Node* head)
             foundDataValues.insert(currentNode->data);
             currentNode = currentNode->next;
         }
-    }
-}
-
-void OutputList(List::Node* head)
-{
-    List::Node* outputNode = head;
-    while (outputNode != nullptr)
-    {
-        std::cout << outputNode->data << " ";
-        outputNode = outputNode->next;
     }
 }

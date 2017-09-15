@@ -33,5 +33,16 @@ Node* AppendEnd(Node* tail, Node* newNode)
     return newNode;
 }
 
+//-----------------------------------------------------------------------------
+//Output values of the list in order, separated by spaces (use for testing)
+void OutputList(Node* head)
+{
+    List::Node* outputNode = head;
+    while (outputNode != nullptr)
+    {
+        std::cout << outputNode->data << " ";
+        outputNode = outputNode->next;
+    }
+}
 
 } //End namespace List
