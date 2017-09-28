@@ -19,8 +19,26 @@ void DeleteMiddleNode(List::Node* nodeToDelete);
 int main(int argc, char* argv[])
 {
     Node head = Node(0);
-    Node 
-    AppendEnd(&head, )
+    Node node1 = Node(1);
+    AppendEnd(&head, &node1);
+    Node node2 = Node(2);
+    AppendEnd(&node1, &node2);
+    Node node3 = Node(3);
+    AppendEnd(&node2, &node3);
+    Node node4 = Node(4);
+    AppendEnd(&node3, &node4);
+
+    std::cout << "List before delete: ";
+    OutputList(&head);
+    std::cout << std::endl;
+
+    DeleteMiddleNode(&node2);
+
+    std::cout << "List after delete: ";
+    OutputList(&head);
+    std::cout << std::endl;
+
+    std::cin.get();
 
     return 0;
 }
