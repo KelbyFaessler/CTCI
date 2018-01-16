@@ -31,7 +31,44 @@ int main(int argc, char* argv[])
     bookSet.insert(book2);
     bookSet.insert(book3);
 
+    for (const Book& book : bookSet)
+    {
+        std::cout << "Book: " << book.GetTitle() << std::endl;
+    }
 
+    //provide only hasher (uses default comparator)
+    std::unordered_set<Book, BookHasher> usetHasher;
+    usetHasher.insert(book1);
+    usetHasher.insert(book2);
+    usetHasher.insert(book3);
+
+    std::cout << "unordered set with provided hasher:" << std::endl;
+    for (const Book& book : usetHasher)
+    {
+        BookHasher hasher;
+        std::cout << "Book: " << book.GetTitle() 
+                  << "   Hash: " << hasher(book) 
+                  << std::endl;
+    }
+
+    //provide hasher and comparator
+    std::unordered_set<Book, BookHasher, BookComparator> usetHasherComp;
+    usetHasherComp.insert(book1);
+    usetHasherComp.insert(book2);
+    usetHasherComp.insert(book3);
+
+    std::cout << "unordered set with provided hasher and comparator:" << std::endl;
+    for (const Book& book : usetHasher)
+    {
+        BookHasher hasher;
+        std::cout << "Book: " << book.GetTitle()
+                  << "   Hash: " << hasher(book)
+                  << std::endl;
+    }
+
+
+    //pause console to read output
+    std::cin.get();
 
     return 0;
 }

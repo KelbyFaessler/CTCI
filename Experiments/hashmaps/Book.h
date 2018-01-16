@@ -5,6 +5,7 @@ Class representing a book for an online library. Used in set/map tests.
 #define BOOK_H
 
 #include <string>
+#include <functional>
 
 class Book
 {
@@ -68,5 +69,26 @@ inline bool operator>=(const Book& lhs, const Book& rhs)
 {
     return !operator<(lhs, rhs);
 }
+
+struct BookHasher
+{
+    size_t operator()(const Book& obj) const
+    {
+        return std::hash<std::string>()(obj.GetTitle() + obj.GetAuthor());
+    }
+};
+
+struct BookComparator
+{
+    bool operator()(const Book& lhs, const Book& rhs) const
+    {
+        if ((lhs.GetTitle() == rhs.GetTitle()) && 
+            (lhs.GetAuthor() == rhs.GetAuthor()))
+        {
+            return true;
+        }
+        return false;
+    }
+};
 
 #endif // !BOOK_H
