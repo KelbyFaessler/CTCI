@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
     {
         std::cout << "value: " << i << std::endl;
     }
+    std::cout << std::endl;
 
     Book book1 = Book("Leo Tolstoy", "War and Peace");
     Book book2 = Book("Herman Melville", "Moby Dick");
@@ -31,10 +32,12 @@ int main(int argc, char* argv[])
     bookSet.insert(book2);
     bookSet.insert(book3);
 
+    std::cout << "Book objects to work with:" << std::endl;
     for (const Book& book : bookSet)
     {
         std::cout << "Book: " << book.GetTitle() << std::endl;
     }
+    std::cout << std::endl;
 
     //provide only hasher (uses default comparator)
     std::unordered_set<Book, BookHasher> usetHasher;
@@ -50,6 +53,7 @@ int main(int argc, char* argv[])
                   << "   Hash: " << hasher(book) 
                   << std::endl;
     }
+    std::cout << std::endl;
 
     //provide hasher and comparator
     std::unordered_set<Book, BookHasher, BookComparator> usetHasherComp;
@@ -65,6 +69,10 @@ int main(int argc, char* argv[])
                   << "   Hash: " << hasher(book)
                   << std::endl;
     }
+    std::cout << std::endl;
+
+    size_t letterHash = std::hash<std::string>()("a");
+    std::cout << "Hash of \"a\": " << letterHash << std::endl;
 
 
     //pause console to read output
