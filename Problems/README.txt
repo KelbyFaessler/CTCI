@@ -1,0 +1,1 @@
+These projects are for playing around and testing my skill at coding algorithms from scratch (e.g. merge sort)
