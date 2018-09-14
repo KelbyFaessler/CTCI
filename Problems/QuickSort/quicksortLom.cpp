@@ -1,19 +1,28 @@
+/******************************************************************************
+* Description: Implementation of the Lomuto partitioning scheme for the
+* quicksort algorithm. Included is one optimization I made: to select the
+* middle element as the pivot rather than the first or last. This means
+* performance won't degrade to O(n^2) when the array is already sorted or
+* reverse sorted.
+*
+* Lomuto partitioning scheme:
+******************************************************************************/
+#include "QuicksortLom.h"
 
-#include "quicksortLom.h"
+#include "Utils.h"
 
-#include "utils.h"
 
-void quicksortLom(std::vector<int>& vecToSort, int lowIndex, int highIndex)
+void QuicksortLom::quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex)
 {
     if (lowIndex < highIndex)
     {
-        int pivotIndex = partitionLom(vecToSort, lowIndex, highIndex);
-        quicksortLom(vecToSort, lowIndex, pivotIndex - 1);
-        quicksortLom(vecToSort, pivotIndex + 1, highIndex);
+        int pivotIndex = partition(vecToSort, lowIndex, highIndex);
+        quicksort(vecToSort, lowIndex, pivotIndex - 1);
+        quicksort(vecToSort, pivotIndex + 1, highIndex);
     }
 }
 
-int partitionLom(std::vector<int>& vecToSort, int lowIndex, int highIndex)
+int QuicksortLom::partition(std::vector<int>& vecToSort, int lowIndex, int highIndex)
 {
     int initPivotIndex = (lowIndex + highIndex) / 2;   //is this going to work with this as pivot instead of highIndex. What about
     int pivotVal = vecToSort[initPivotIndex];          //last swap where vec[i] and vec[high] are swapped? How to do that now?
@@ -37,31 +46,4 @@ int partitionLom(std::vector<int>& vecToSort, int lowIndex, int highIndex)
     finalPivotIndex = nextSwapIndex;
 
     return finalPivotIndex;
-}
-
-
-void quicksortLomStd(std::vector<int>& vecToSort, int lowIndex, int highIndex)
-{
-    if (lowIndex < highIndex)
-    {
-        int p = partitionLomStd(vecToSort, lowIndex, highIndex);
-        quicksortLomStd(vecToSort, lowIndex, p - 1);
-        quicksortLomStd(vecToSort, p + 1, highIndex);
-    }
-}
-
-int partitionLomStd(std::vector<int>& vecToSort, int lowIndex, int highIndex)
-{
-    int pivot = vecToSort[highIndex];
-    int i = lowIndex;
-    for (int j = lowIndex; j < highIndex; ++j)
-    {
-        if (vecToSort[j] < pivot)
-        {
-            swap(vecToSort[i], vecToSort[j]);
-            ++i;
-        }
-    }
-    swap(vecToSort[i], vecToSort[highIndex]);
-    return i;
 }

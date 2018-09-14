@@ -114,14 +114,17 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="quicksort1.cpp" />
     <ClCompile Include="quicksortCTCI.cpp" />
-    <ClCompile Include="quicksortLom.cpp" />
-    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="QuicksortLom.cpp" />
+    <ClCompile Include="QuicksortLomStd.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="quicksort1.h" />
+    <ClInclude Include="QuicksortBase.h" />
     <ClInclude Include="quicksortCTCI.h" />
-    <ClInclude Include="quicksortLom.h" />
-    <ClInclude Include="utils.h" />
+    <ClInclude Include="QuicksortLom.h" />
+    <ClInclude Include="QuicksortLomStd.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
