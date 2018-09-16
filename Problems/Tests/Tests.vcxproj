@@ -36,8 +36,8 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlgorithmTests{475C9731-AB39-41E0-8709-789C1AA7FC67}">
-      <Project>{475c9731-ab39-41e0-8709-789c1aa7fc67}</Project>
+    <ProjectReference Include="..\QuickSort\QuickSort.vcxproj">
+      <Project>{395927a1-7c98-408a-9851-388ff6d9c068}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +58,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\Users\Kelby\Documents\CS_OwnStudy\CTCI\Problems\QuickSort;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -88,6 +89,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Kelby\Documents\CS_OwnStudy\CTCI\Problems\QuickSort;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

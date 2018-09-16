@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
     //perform sort
     //quicksort1(vec1, 0, vec1.size() - 1);
     //quicksortCTCI(vec1, 0, vec1.size() - 1);
-    quicksortLom(vec1, 0, vec1.size() - 1);
+    //quicksortLom(vec1, 0, vec1.size() - 1);
     //quicksortLomStd(vec1, 0, vec1.size() - 1);
     //quicksort(vec2, 0, vec2.size() - 1);
 
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     outputVector(vec1, "First  vector sorted: ");
 
     outputVector(vec2, "Original vector 2: ");
-    quicksortLom(vec2, 0, vec2.size() - 1);
+    //quicksortLom(vec2, 0, vec2.size() - 1);
     outputVector(vec2, std::string("Second vector sorted: "));
 
     //keep console open
