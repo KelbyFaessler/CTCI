@@ -1,22 +1,28 @@
+/******************************************************************************
+* Description: Implementation of the the partitioning scheme for the quicksort
+* algorithm given in CTCI (Cracking the Coding Interview). Included is one
+* optimization I made: to select the middle element as the pivot rather than
+* the first or last. This means performance won't degrade to O(n^2) when the
+* array is already sorted or reverse sorted.
+*
+******************************************************************************/
+#include "QuicksortCTCI.h"
+#include "Utils.h"
 
-#include "quicksortCTCI.h"
-#include "utils.h"
-
-
-void quicksortCTCI(std::vector<int>& arr, int left, int right)
+void QuicksortCTCI::quicksort(std::vector<int>& arr, int left, int right)
 {
-    int index = partitionCTCI(arr, left, right);
+    int index = partition(arr, left, right);
     if (left < index - 1) //sort left half
     {
-        quicksortCTCI(arr, left, index - 1);
+        quicksort(arr, left, index - 1);
     }
     if (index < right) //sort right half
     {
-        quicksortCTCI(arr, index, right);
+        quicksort(arr, index, right);
     }
 }
 
-int partitionCTCI(std::vector<int>& arr, int left, int right)
+int QuicksortCTCI::partition(std::vector<int>& arr, int left, int right)
 {
     int pivot = arr[(left + right) / 2];
     while (left <= right)

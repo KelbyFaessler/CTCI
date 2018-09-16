@@ -1,7 +1,12 @@
-
-#include "quicksort1.h"
-
-#include "utils.h"
+/******************************************************************************
+* Description: Implementation of the quicksort algorithm; practice attempt #1.
+* Included is one optimization I made: to select the middle element as the
+* pivot rather than the first or last. This means performance won't degrade to
+* O(n^2) when the array is already sorted or reverse sorted.
+*
+******************************************************************************/
+#include "Quicksort1.h"
+#include "Utils.h"
 
 //                 index     0  1  2  3  4  5  6
 //std::vector<int> vec1 = { 4, 7, 5, 3, 10, 1, 9 };  //odd num elements
@@ -10,60 +15,59 @@
 //std::vector<int> vec2 = { 4, 55, 1, 78, 23, 34, 66, 29 }; //even num elements
 
 
-int partition1(std::vector<int>& input, int indexLow, int indexHigh)
+void Quicksort1::quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex)
 {
-    int pivot = (indexLow + indexHigh) / 2;
+    if (lowIndex == highIndex)
+    {
+        return;
+    }
+    int pivotIndex = partition(vecToSort, lowIndex, highIndex);
+    if (lowIndex < pivotIndex)
+    {
+        quicksort(vecToSort, lowIndex, pivotIndex - 1);
+    }
+    if (highIndex > pivotIndex)
+    {
+        quicksort(vecToSort, pivotIndex + 1, highIndex);
+    }
+}
+
+int Quicksort1::partition(std::vector<int>& vecToSort, int lowIndex, int highIndex)
+{
+    int pivot = (lowIndex + highIndex) / 2;
 
     while (true)
     {
-        while (input[indexLow] < input[pivot])
+        while (vecToSort[lowIndex] < vecToSort[pivot])
         {
-            ++indexLow;
+            ++lowIndex;
         }
 
-        while (input[indexHigh] > input[pivot])
+        while (vecToSort[highIndex] > vecToSort[pivot])
         {
-            --indexHigh;
+            --highIndex;
         }
 
-        if (indexHigh <= indexLow)
+        if (highIndex <= lowIndex)
         {
             break;
         }
         else
         {
-            swap(input[indexLow], input[indexHigh]);
-            if (indexLow == pivot)
+            swap(vecToSort[lowIndex], vecToSort[highIndex]);
+            if (lowIndex == pivot)
             {
-                pivot = indexHigh; //pivot element moved, adjust pivot int
+                pivot = highIndex; //pivot element moved, adjust pivot int
             }
-            else if (indexHigh == pivot)
+            else if (highIndex == pivot)
             {
-                pivot = indexLow; //pivot element moved, adjust pivot int
+                pivot = lowIndex; //pivot element moved, adjust pivot int
             }
-            ++indexLow;
-            --indexHigh;
+            ++lowIndex;
+            --highIndex;
         }
-        outputVector(input);
+        outputVector(vecToSort);
     }
-
 
     return pivot;
-}
-
-void quicksort1(std::vector<int>& inputArr, int indexLow, int indexHigh)
-{
-    if (indexLow == indexHigh)
-    {
-        return;
-    }
-    int pivotIndex = partition1(inputArr, indexLow, indexHigh);
-    if (indexLow < pivotIndex)
-    {
-        quicksort1(inputArr, indexLow, pivotIndex - 1);
-    }
-    if (indexHigh > pivotIndex)
-    {
-        quicksort1(inputArr, pivotIndex + 1, indexHigh);
-    }
 }
