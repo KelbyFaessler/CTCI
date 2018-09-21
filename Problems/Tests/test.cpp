@@ -7,13 +7,6 @@ against it
 #include "gtest/gtest.h"
 #include "QuicksortLom.h"
 #include "QuicksortLomStd.h"
-//#include "../QuickSort/QuicksortLom.h"
-//#include "../QuickSort/QuicksortLomStd.h"
-
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
-}
 
 
 //How to write a set of test cases that I can use to test all implementations
@@ -63,15 +56,10 @@ class QuicksortTest : public ::testing::Test
         std::vector<int> vecEven = { 4, 55, 1, 78, 23, 34, 66, 29 };
 };
 
-//class QuicksortTest : public ::testing::TestWithParam<const char*>
-//{
-//
-//};
-
-//Declare a type parameterized test
+//Declare a type parameterized test passing my fixture
 TYPED_TEST_CASE_P(QuicksortTest);
 
-//Define the cases for the type parameterized test
+//Define the cases for the type parameterized test (repeat as many times as necessary)
 TYPED_TEST_P(QuicksortTest, sortEvenArray)
 {
     lib.quicksort(vecEven, 0, vecEven.size() - 1);
@@ -79,8 +67,17 @@ TYPED_TEST_P(QuicksortTest, sortEvenArray)
     EXPECT_TRUE(vecValsCorrect);
 }
 
+TYPED_TEST_P(QuicksortTest, sortOddArray)
+{
+    lib.quicksort(vecOdd, 0, vecOdd.size() - 1);
+    bool vecValsCorrect = checkResult(vecOdd);
+    EXPECT_TRUE(vecValsCorrect);
+}
+
 //Need to register all test patterns before instantiating them
-REGISTER_TYPED_TEST_CASE_P(QuicksortTest, sortEvenArray);
+REGISTER_TYPED_TEST_CASE_P(QuicksortTest, 
+    sortEvenArray,
+    sortOddArray);
 
 typedef ::testing::Types<QuicksortLom, QuicksortLomStd> QuicksortTypes;
-INSTANTIATE_TYPED_TEST_CASE_P(label_qtests, QuicksortTest, QuicksortTypes);
+INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, QuicksortTest, QuicksortTypes);
