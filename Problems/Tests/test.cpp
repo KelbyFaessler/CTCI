@@ -7,7 +7,8 @@ against it
 #include "gtest/gtest.h"
 #include "QuicksortLom.h"
 #include "QuicksortLomStd.h"
-
+#include "QuicksortCTCI.h"
+#include "Quicksort1.h"
 
 //How to write a set of test cases that I can use to test all implementations
 //of a specific algorithm? For example, I might write 8 quicksort implementations,
@@ -79,5 +80,5 @@ REGISTER_TYPED_TEST_CASE_P(QuicksortTest,
     sortEvenArray,
     sortOddArray);
 
-typedef ::testing::Types<QuicksortLom, QuicksortLomStd> QuicksortTypes;
+typedef ::testing::Types<QuicksortLom, QuicksortLomStd, QuicksortCTCI> QuicksortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, QuicksortTest, QuicksortTypes);
