@@ -116,5 +116,5 @@ REGISTER_TYPED_TEST_CASE_P(QuicksortTest,
     sortRepeatArray,
     sortSortedArray);
 
-typedef ::testing::Types<QuicksortLom, QuicksortLomStd, QuicksortCTCI> QuicksortTypes;
+typedef ::testing::Types<QuicksortLom, QuicksortLomStd, QuicksortCTCI, Quicksort1> QuicksortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, QuicksortTest, QuicksortTypes);

@@ -39,6 +39,9 @@
     <ProjectReference Include="..\QuickSort\QuickSort.vcxproj">
       <Project>{395927a1-7c98-408a-9851-388ff6d9c068}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.vcxproj">
+      <Project>{37a722e5-a64e-472b-aa32-8e435c148940}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -58,7 +61,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Kelby\Documents\CS_OwnStudy\CTCI\Problems\QuickSort;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\QuickSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -89,7 +92,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Users\Kelby\Documents\CS_OwnStudy\CTCI\Problems\QuickSort;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\QuickSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
