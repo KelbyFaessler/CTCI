@@ -11,6 +11,9 @@
 
 void QuicksortCTCI::quicksort(std::vector<int>& arr, int left, int right)
 {
+    //ADDED BY ME
+    if (arr.size() < 1) return;
+    //END ADDED BY ME
     int index = partition(arr, left, right);
     if (left < index - 1) //sort left half
     {

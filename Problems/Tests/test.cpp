@@ -55,6 +55,10 @@ class QuicksortTest : public ::testing::Test
         T lib;
         std::vector<int> vecOdd = { 4, 7, 5, 3, 10, 1, 9 };
         std::vector<int> vecEven = { 4, 55, 1, 78, 23, 34, 66, 29 };
+        std::vector<int> vecEmpty = {};
+        std::vector<int> vecSingle = { 1 };
+        std::vector<int> vecRepeats = { 4, 3, 7, 5, 3, 10, 1, 3, 9, 9, 5, 5, 5 };
+        std::vector<int> vecSorted = { 1, 1, 3, 4, 7, 9, 11, 14, 15 };
 };
 
 //Declare a type parameterized test passing my fixture
@@ -75,10 +79,42 @@ TYPED_TEST_P(QuicksortTest, sortOddArray)
     EXPECT_TRUE(vecValsCorrect);
 }
 
+TYPED_TEST_P(QuicksortTest, sortEmptyArray)
+{
+    lib.quicksort(vecEmpty, 0, vecEmpty.size() - 1);
+    bool vecValsCorrect = checkResult(vecEmpty);
+    EXPECT_TRUE(vecValsCorrect);
+}
+
+TYPED_TEST_P(QuicksortTest, sortSingleArray)
+{
+    lib.quicksort(vecSingle, 0, vecSingle.size() - 1);
+    bool vecValsCorrect = checkResult(vecSingle);
+    EXPECT_TRUE(vecValsCorrect);
+}
+
+TYPED_TEST_P(QuicksortTest, sortRepeatArray)
+{
+    lib.quicksort(vecRepeats, 0, vecRepeats.size() - 1);
+    bool vecValsCorrect = checkResult(vecRepeats);
+    EXPECT_TRUE(vecValsCorrect);
+}
+
+TYPED_TEST_P(QuicksortTest, sortSortedArray)
+{
+    lib.quicksort(vecSorted, 0, vecSorted.size() - 1);
+    bool vecValsCorrect = checkResult(vecSorted);
+    EXPECT_TRUE(vecValsCorrect);
+}
+
 //Need to register all test patterns before instantiating them
 REGISTER_TYPED_TEST_CASE_P(QuicksortTest, 
     sortEvenArray,
-    sortOddArray);
+    sortOddArray,
+    sortEmptyArray,
+    sortSingleArray,
+    sortRepeatArray,
+    sortSortedArray);
 
 typedef ::testing::Types<QuicksortLom, QuicksortLomStd, QuicksortCTCI> QuicksortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, QuicksortTest, QuicksortTypes);
