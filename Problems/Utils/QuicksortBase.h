@@ -4,12 +4,12 @@
 ******************************************************************************/
 #pragma once
 
+#include "SortBase.h"
 #include <vector>
 
-class QuicksortBase
+class QuicksortBase : public SortBase
 {
     public:
-        virtual void quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex) = 0;
 
     private:
         virtual int partition(std::vector<int>& vecToSort, int lowIndex, int highIndex) = 0;
