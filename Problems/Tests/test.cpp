@@ -52,6 +52,11 @@ class QuicksortTest : public ::testing::Test
             return goodResult;
         }
 
+        //add function to check that all values in original array are in sorted array
+        //this function can also check before/after array sizes. 
+        //One implementation of this function would be to have matching sorted vectors
+        //that I've manually sorted for each of the input vectors
+
         T lib;
         std::vector<int> vecOdd = { 4, 7, 5, 3, 10, 1, 9 };
         std::vector<int> vecEven = { 4, 55, 1, 78, 23, 34, 66, 29 };
@@ -59,6 +64,7 @@ class QuicksortTest : public ::testing::Test
         std::vector<int> vecSingle = { 1 };
         std::vector<int> vecRepeats = { 4, 3, 7, 5, 3, 10, 1, 3, 9, 9, 5, 5, 5 };
         std::vector<int> vecSorted = { 1, 1, 3, 4, 7, 9, 11, 14, 15 };
+        //add reverse sorted vector
 };
 
 //Declare a type parameterized test passing my fixture
@@ -67,42 +73,42 @@ TYPED_TEST_CASE_P(QuicksortTest);
 //Define the cases for the type parameterized test (repeat as many times as necessary)
 TYPED_TEST_P(QuicksortTest, sortEvenArray)
 {
-    lib.quicksort(vecEven, 0, vecEven.size() - 1);
+    lib.sort(vecEven);
     bool vecValsCorrect = checkResult(vecEven);
     EXPECT_TRUE(vecValsCorrect);
 }
 
 TYPED_TEST_P(QuicksortTest, sortOddArray)
 {
-    lib.quicksort(vecOdd, 0, vecOdd.size() - 1);
+    lib.sort(vecOdd);
     bool vecValsCorrect = checkResult(vecOdd);
     EXPECT_TRUE(vecValsCorrect);
 }
 
 TYPED_TEST_P(QuicksortTest, sortEmptyArray)
 {
-    lib.quicksort(vecEmpty, 0, vecEmpty.size() - 1);
+    lib.sort(vecEmpty);
     bool vecValsCorrect = checkResult(vecEmpty);
     EXPECT_TRUE(vecValsCorrect);
 }
 
 TYPED_TEST_P(QuicksortTest, sortSingleArray)
 {
-    lib.quicksort(vecSingle, 0, vecSingle.size() - 1);
+    lib.sort(vecSingle);
     bool vecValsCorrect = checkResult(vecSingle);
     EXPECT_TRUE(vecValsCorrect);
 }
 
 TYPED_TEST_P(QuicksortTest, sortRepeatArray)
 {
-    lib.quicksort(vecRepeats, 0, vecRepeats.size() - 1);
+    lib.sort(vecRepeats);
     bool vecValsCorrect = checkResult(vecRepeats);
     EXPECT_TRUE(vecValsCorrect);
 }
 
 TYPED_TEST_P(QuicksortTest, sortSortedArray)
 {
-    lib.quicksort(vecSorted, 0, vecSorted.size() - 1);
+    lib.sort(vecSorted);
     bool vecValsCorrect = checkResult(vecSorted);
     EXPECT_TRUE(vecValsCorrect);
 }

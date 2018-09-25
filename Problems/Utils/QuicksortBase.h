@@ -10,7 +10,9 @@
 class QuicksortBase : public SortBase
 {
     public:
+        void sort(std::vector<int>& vecToSort); //inherited      
 
     private:
+        virtual void quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex) = 0;
         virtual int partition(std::vector<int>& vecToSort, int lowIndex, int highIndex) = 0;
 };

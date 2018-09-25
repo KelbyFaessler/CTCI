@@ -10,7 +10,7 @@
 class SortBase
 {
 public:
-    virtual void quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex) = 0;
+    virtual void sort(std::vector<int>& vecToSort) = 0;
 
 private:
 

@@ -13,8 +13,8 @@
 class Quicksort1: public QuicksortBase
 {
 public:
-    void quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex);
 
 private:
+    void quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex);
     int partition(std::vector<int>& vecToSort, int lowIndex, int highIndex);
 };
