@@ -24,12 +24,18 @@
     <ClInclude Include="Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MergesortBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="QuicksortBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

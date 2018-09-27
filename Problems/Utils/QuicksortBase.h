@@ -10,7 +10,7 @@
 class QuicksortBase : public SortBase
 {
     public:
-        void sort(std::vector<int>& vecToSort); //inherited      
+        virtual void sort(std::vector<int>& vecToSort); //inherited      
 
     private:
         virtual void quicksort(std::vector<int>& vecToSort, int lowIndex, int highIndex) = 0;

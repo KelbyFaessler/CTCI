@@ -10,6 +10,8 @@ against it
 #include "QuicksortCTCI.h"
 #include "Quicksort1.h"
 
+#include "MergesortCTCI.h"
+
 //How to write a set of test cases that I can use to test all implementations
 //of a specific algorithm? For example, I might write 8 quicksort implementations,
 //but I only want to use a single set of tests to test all of them.
@@ -23,7 +25,7 @@ against it
 
 //Fixtures
 template <typename T>
-class QuicksortTest : public ::testing::Test
+class SortTest : public ::testing::Test
 {
     protected:
         void SetUp() override
@@ -68,45 +70,45 @@ class QuicksortTest : public ::testing::Test
 };
 
 //Declare a type parameterized test passing my fixture
-TYPED_TEST_CASE_P(QuicksortTest);
+TYPED_TEST_CASE_P(SortTest);
 
 //Define the cases for the type parameterized test (repeat as many times as necessary)
-TYPED_TEST_P(QuicksortTest, sortEvenArray)
+TYPED_TEST_P(SortTest, sortEvenArray)
 {
     lib.sort(vecEven);
     bool vecValsCorrect = checkResult(vecEven);
     EXPECT_TRUE(vecValsCorrect);
 }
 
-TYPED_TEST_P(QuicksortTest, sortOddArray)
+TYPED_TEST_P(SortTest, sortOddArray)
 {
     lib.sort(vecOdd);
     bool vecValsCorrect = checkResult(vecOdd);
     EXPECT_TRUE(vecValsCorrect);
 }
 
-TYPED_TEST_P(QuicksortTest, sortEmptyArray)
+TYPED_TEST_P(SortTest, sortEmptyArray)
 {
     lib.sort(vecEmpty);
     bool vecValsCorrect = checkResult(vecEmpty);
     EXPECT_TRUE(vecValsCorrect);
 }
 
-TYPED_TEST_P(QuicksortTest, sortSingleArray)
+TYPED_TEST_P(SortTest, sortSingleArray)
 {
     lib.sort(vecSingle);
     bool vecValsCorrect = checkResult(vecSingle);
     EXPECT_TRUE(vecValsCorrect);
 }
 
-TYPED_TEST_P(QuicksortTest, sortRepeatArray)
+TYPED_TEST_P(SortTest, sortRepeatArray)
 {
     lib.sort(vecRepeats);
     bool vecValsCorrect = checkResult(vecRepeats);
     EXPECT_TRUE(vecValsCorrect);
 }
 
-TYPED_TEST_P(QuicksortTest, sortSortedArray)
+TYPED_TEST_P(SortTest, sortSortedArray)
 {
     lib.sort(vecSorted);
     bool vecValsCorrect = checkResult(vecSorted);
@@ -114,7 +116,7 @@ TYPED_TEST_P(QuicksortTest, sortSortedArray)
 }
 
 //Need to register all test patterns before instantiating them
-REGISTER_TYPED_TEST_CASE_P(QuicksortTest, 
+REGISTER_TYPED_TEST_CASE_P(SortTest, 
     sortEvenArray,
     sortOddArray,
     sortEmptyArray,
@@ -123,4 +125,7 @@ REGISTER_TYPED_TEST_CASE_P(QuicksortTest,
     sortSortedArray);
 
 typedef ::testing::Types<QuicksortLom, QuicksortLomStd, QuicksortCTCI, Quicksort1> QuicksortTypes;
-INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, QuicksortTest, QuicksortTypes);
+INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, SortTest, QuicksortTypes);
+
+typedef ::testing::Types<MergesortCTCI> MergesortTypes;
+INSTANTIATE_TYPED_TEST_CASE_P(unique_label_mtests, SortTest, MergesortTypes);

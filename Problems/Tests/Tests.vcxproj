@@ -36,6 +36,9 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MergeSort\MergeSort.vcxproj">
+      <Project>{65d0ee05-02b3-46fc-ac7a-fe15d563e326}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\QuickSort\QuickSort.vcxproj">
       <Project>{395927a1-7c98-408a-9851-388ff6d9c068}</Project>
     </ProjectReference>
@@ -61,7 +64,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\QuickSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Mergesort;..\QuickSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -92,7 +95,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\QuickSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Mergesort;..\QuickSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
