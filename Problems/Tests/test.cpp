@@ -67,6 +67,8 @@ class SortTest : public ::testing::Test
         std::vector<int> vecRepeats = { 4, 3, 7, 5, 3, 10, 1, 3, 9, 9, 5, 5, 5 };
         std::vector<int> vecSorted = { 1, 1, 3, 4, 7, 9, 11, 14, 15 };
         //add reverse sorted vector
+        //add vector with large individual numbers in it
+        //add vector with large number of elements
 };
 
 //Declare a type parameterized test passing my fixture

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -117,12 +117,14 @@
   <ItemGroup>
     <ClInclude Include="MergesortBase.h" />
     <ClInclude Include="QuicksortBase.h" />
+    <ClInclude Include="RadixsortBase.h" />
     <ClInclude Include="SortBase.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MergesortBase.cpp" />
     <ClCompile Include="QuicksortBase.cpp" />
+    <ClCompile Include="RadixsortBase.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
