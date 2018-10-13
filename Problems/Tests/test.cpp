@@ -12,6 +12,8 @@ against it
 
 #include "MergesortCTCI.h"
 
+#include "Radixsort.h"
+
 //How to write a set of test cases that I can use to test all implementations
 //of a specific algorithm? For example, I might write 8 quicksort implementations,
 //but I only want to use a single set of tests to test all of them.
@@ -131,3 +133,6 @@ INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, SortTest, QuicksortTypes);
 
 typedef ::testing::Types<MergesortCTCI> MergesortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_mtests, SortTest, MergesortTypes);
+
+typedef ::testing::Types<Radixsort> RadixsortTypes;
+INSTANTIATE_TYPED_TEST_CASE_P(unique_label_rtests, SortTest, RadixsortTypes);

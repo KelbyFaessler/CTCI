@@ -12,5 +12,5 @@ public:
 
 private:
     void radixsort(std::vector<int>& vecToSort);
-    int countingsort(std::vector<int>& vecToSort, int digit);
+    bool countingsort(std::vector<int>& vecToSort, int digit);
 };

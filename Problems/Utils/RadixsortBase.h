@@ -13,8 +13,5 @@ public:
     virtual void sort(std::vector<int>& vecToSort); //inherited      
 
 private:
-    virtual void radixsort(std::vector<int>& vecToSort,
-        std::vector<int>& helper,
-        int lowIndex,
-        int highIndex) = 0;
+    virtual void radixsort(std::vector<int>& vecToSort) = 0;
 };

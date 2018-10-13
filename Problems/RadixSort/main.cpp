@@ -23,10 +23,17 @@ Radix sort algorithm:
 #include <string>
 #include <vector>
 
+#include "Radixsort.h"
 
 int main(int argc, char* argv[])
 {
     //Don't actually need anything in main here right now
+
+    //DEBUG
+    std::vector<int> vecEven = { 4, 55, 1, 78, 23, 34, 66, 29 };
+    Radixsort sortOjb;
+    sortOjb.sort(vecEven);
+    //END DEBUG
 
     //keep console open
     std::cin.get();
