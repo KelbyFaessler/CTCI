@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hashmaps", "hashmaps\hashmaps.vcxproj", "{2C9C55AC-982E-423B-83CF-6C055480F70F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConstTests", "ConstTests\ConstTests.vcxproj", "{0E87A317-EFD6-46EA-B415-B252F300E9BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,8 +23,19 @@ Global
 		{2C9C55AC-982E-423B-83CF-6C055480F70F}.Release|x64.Build.0 = Release|x64
 		{2C9C55AC-982E-423B-83CF-6C055480F70F}.Release|x86.ActiveCfg = Release|Win32
 		{2C9C55AC-982E-423B-83CF-6C055480F70F}.Release|x86.Build.0 = Release|Win32
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Debug|x64.ActiveCfg = Debug|x64
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Debug|x64.Build.0 = Debug|x64
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Debug|x86.ActiveCfg = Debug|Win32
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Debug|x86.Build.0 = Debug|Win32
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x64.ActiveCfg = Release|x64
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x64.Build.0 = Release|x64
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x86.ActiveCfg = Release|Win32
+		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D26D4D3E-A564-46E7-9729-C90C4CDC7DB0}
 	EndGlobalSection
 EndGlobal

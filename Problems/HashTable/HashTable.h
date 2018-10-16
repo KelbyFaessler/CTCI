@@ -16,8 +16,8 @@ class HashTable
 {
     public:
         void Insert(std::string& key, int value);
-        int& operator[](std::string& key);
-        const int operator[](std::string& key);
+        int& operator[](const std::string& key);
+        const int operator[](const std::string& key) const;
 
     private:
         int size;
