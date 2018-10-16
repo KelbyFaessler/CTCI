@@ -15,9 +15,15 @@
 class HashTable
 {
     public:
-        void Insert(std::string& key, int value);
+        HashTable();
+        HashTable(const HashTable& other);
+        ~HashTable();
+
+        HashTable& operator=(const HashTable& other);
         int& operator[](const std::string& key);
         const int operator[](const std::string& key) const;
+
+        void Insert(std::string& key, int value);
 
     private:
         int size;
@@ -25,4 +31,5 @@ class HashTable
         //int data[]; do I want a C-style array or a vector?
 
         void Resize();
+        int Hash(const std::string& key);
 };
