@@ -22,15 +22,17 @@ class HashTable
 
         HashTable& operator=(const HashTable& other);
         int& operator[](const std::string& key);
-        const int operator[](const std::string& key) const;
+        //no const version of operator[] because it will always insert a value
+        //if it doesn't but it also returns a reference, no way to tell when a
+        //new value is inserted
 
-        void Insert(std::string& key, int value);
-
+        void Insert(const std::string& key, int value);
+        bool Exists(const std::string& key);
     private:
         int hashTableSize;
         int hashTableCapacity;
-        std::vector<std::list<int>> data;
+        std::vector<std::list<std::pair<std::string, int>>> data;
 
-        void Resize();
-        int Hash(const std::string& key);
+        void Resize(int newCapacity);
+        int Hash(const std::string& key) const;
 };
