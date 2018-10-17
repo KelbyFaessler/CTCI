@@ -10,7 +10,8 @@
 #pragma once
 
 #include <string>
-//#include <vector>
+#include <list>
+#include <vector>
 
 class HashTable
 {
@@ -26,9 +27,9 @@ class HashTable
         void Insert(std::string& key, int value);
 
     private:
-        int size;
-        int capacity;
-        //int data[]; do I want a C-style array or a vector?
+        int hashTableSize;
+        int hashTableCapacity;
+        std::vector<std::list<int>> data;
 
         void Resize();
         int Hash(const std::string& key);
