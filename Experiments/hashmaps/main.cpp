@@ -40,13 +40,13 @@ int main(int argc, char* argv[])
     std::cout << std::endl;
 
     //provide only hasher (uses default comparator)
-    std::unordered_set<Book, BookHasher> usetHasher;
-    usetHasher.insert(book1);
-    usetHasher.insert(book2);
-    usetHasher.insert(book3);
+    std::unordered_set<Book, BookHasher> useHasher;
+    useHasher.insert(book1);
+    useHasher.insert(book2);
+    useHasher.insert(book3);
 
     std::cout << "unordered set with provided hasher:" << std::endl;
-    for (const Book& book : usetHasher)
+    for (const Book& book : useHasher)
     {
         BookHasher hasher;
         std::cout << "Book: " << book.GetTitle() 
@@ -56,13 +56,13 @@ int main(int argc, char* argv[])
     std::cout << std::endl;
 
     //provide hasher and comparator
-    std::unordered_set<Book, BookHasher, BookComparator> usetHasherComp;
-    usetHasherComp.insert(book1);
-    usetHasherComp.insert(book2);
-    usetHasherComp.insert(book3);
+    std::unordered_set<Book, BookHasher, BookComparator> useHasherComp;
+    useHasherComp.insert(book1);
+    useHasherComp.insert(book2);
+    useHasherComp.insert(book3);
 
     std::cout << "unordered set with provided hasher and comparator:" << std::endl;
-    for (const Book& book : usetHasher)
+    for (const Book& book : useHasher)
     {
         BookHasher hasher;
         std::cout << "Book: " << book.GetTitle()

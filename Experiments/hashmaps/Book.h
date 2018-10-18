@@ -32,10 +32,7 @@ inline bool operator==(const Book& lhs, const Book& rhs)
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
+    return false;
 }
 
 inline bool operator!=(const Book& lhs, const Book& rhs)
