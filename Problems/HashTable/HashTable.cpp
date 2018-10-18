@@ -76,7 +76,22 @@ bool HashTable::Exists(const std::string & key)
 void HashTable::Resize(int newCapacity)
 {
     //Copy existing data array to temp location
+    std::vector<std::list<std::pair<std::string, int>>> temp(data);
+
+    //Resize vector and update capacity
+    data.clear();
+    data.resize(newCapacity);
+    hashTableCapacity = newCapacity;
+
     //Rehash every value in temp array, insert into new larger array
+    for (const auto& bucketList : temp)
+    {
+        for (const auto& elem : bucketList)
+        {
+            int index = Hash(elem.first) % hashTableCapacity;
+            data[index].push_back(std::pair<std::string, int>(elem.first, elem.second));
+        }
+    }
 }
 
 unsigned int HashTable::Hash(const std::string & key) const
