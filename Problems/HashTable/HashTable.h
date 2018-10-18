@@ -29,10 +29,10 @@ class HashTable
         void Insert(const std::string& key, int value);
         bool Exists(const std::string& key);
     private:
-        int hashTableSize;
-        int hashTableCapacity;
+        unsigned int hashTableSize;
+        unsigned int hashTableCapacity;
         std::vector<std::list<std::pair<std::string, int>>> data;
 
         void Resize(int newCapacity);
-        int Hash(const std::string& key) const;
+        unsigned int Hash(const std::string& key) const;
 };

@@ -55,10 +55,23 @@ int & HashTable::operator[](const std::string & key)
 
 bool HashTable::Exists(const std::string & key)
 {
-    return false;
+    bool keyAlreadyExists = false;
+
+    int index = Hash(key) % hashTableCapacity;
+    
+    std::list<std::pair<std::string, int>> list = data[index];
+    std::list<std::pair<std::string, int>>::const_iterator it;
+    
+    for (it = list.begin(); it != list.end(); ++it)
+    {
+        if ((*it).first == key)
+        {
+            keyAlreadyExists = true;
+        }
+    }
+
+    return keyAlreadyExists;
 }
-
-
 
 void HashTable::Resize(int newCapacity)
 {
@@ -66,10 +79,14 @@ void HashTable::Resize(int newCapacity)
     //Rehash every value in temp array, insert into new larger array
 }
 
-int HashTable::Hash(const std::string & key) const
+unsigned int HashTable::Hash(const std::string & key) const
 {
-    //perform a different computation on each character of string and sum
-    //the results from each character
-    return 0;
+    unsigned int sum = 0;
+    for (int i = 0; i < key.size(); ++i)
+    {
+        sum += key[i] * i;
+    }
+
+    return sum;
 }
 
