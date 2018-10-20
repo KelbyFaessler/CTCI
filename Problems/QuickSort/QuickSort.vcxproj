@@ -77,6 +77,10 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\Problems\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)Debug\Utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +119,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Quicksort1.cpp" />
+    <ClCompile Include="Quicksort2.cpp" />
     <ClCompile Include="QuicksortCTCI.cpp" />
     <ClCompile Include="QuicksortLom.cpp" />
     <ClCompile Include="QuicksortLomStd.cpp" />
@@ -122,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Quicksort1.h" />
+    <ClInclude Include="Quicksort2.h" />
     <ClInclude Include="QuicksortCTCI.h" />
     <ClInclude Include="QuicksortLom.h" />
     <ClInclude Include="QuicksortLomStd.h" />

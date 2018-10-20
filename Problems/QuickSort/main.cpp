@@ -48,10 +48,11 @@ E.g. qsort from C standard library
 #include <string>
 #include <vector>
 
-#include "utils.h"
-#include "quicksort1.h"
-#include "quicksortCTCI.h"
-#include "quicksortLom.h"
+#include "Utils.h"
+#include "Quicksort1.h"
+#include "Quicksort2.h"
+#include "QuicksortCTCI.h"
+#include "QuicksortLom.h"
 
 
 int main(int argc, char* argv[])
@@ -65,11 +66,13 @@ int main(int argc, char* argv[])
     outputVector(vec1, "Original vector 1: ");
 
     //perform sort
-    //quicksort1(vec1, 0, vec1.size() - 1);
     //quicksortCTCI(vec1, 0, vec1.size() - 1);
     //quicksortLom(vec1, 0, vec1.size() - 1);
     //quicksortLomStd(vec1, 0, vec1.size() - 1);
     //quicksort(vec2, 0, vec2.size() - 1);
+    //quicksort1(vec1, 0, vec1.size() - 1);
+    Quicksort2 qs;
+    qs.sort(vec1);
 
     //print results
     outputVector(vec1, "First  vector sorted: ");
