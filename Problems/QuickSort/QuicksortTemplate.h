@@ -17,6 +17,7 @@ class QuicksortX : public QuicksortBase
 public:
     //first create own function declarations here and definitions in cpp. Only
     //then look at QuicksortBase interface and adjust if necessary.
+    void quicksort(); //will need to add fucntion parameters
 
 private:
     //first create own function declarations here and definitions in cpp. Only
