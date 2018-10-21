@@ -12,6 +12,7 @@ against it
 #include "Quicksort2.h"
 
 #include "MergesortCTCI.h"
+#include "Mergesort1.h"
 
 #include "Radixsort.h"
 
@@ -132,7 +133,7 @@ REGISTER_TYPED_TEST_CASE_P(SortTest,
 typedef ::testing::Types<QuicksortLom, QuicksortLomStd, QuicksortCTCI, Quicksort1, Quicksort2> QuicksortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, SortTest, QuicksortTypes);
 
-typedef ::testing::Types<MergesortCTCI> MergesortTypes;
+typedef ::testing::Types<MergesortCTCI, Mergesort1> MergesortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_mtests, SortTest, MergesortTypes);
 
 typedef ::testing::Types<Radixsort> RadixsortTypes;

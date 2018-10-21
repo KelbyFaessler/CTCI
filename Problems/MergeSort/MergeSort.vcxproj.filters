@@ -21,9 +21,21 @@
     <ClCompile Include="MergesortCTCI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MergesortTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mergesort1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MergesortCTCI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mergesort1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

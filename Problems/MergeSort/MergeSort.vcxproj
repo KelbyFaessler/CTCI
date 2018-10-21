@@ -114,10 +114,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mergesort1.cpp" />
     <ClCompile Include="MergesortCTCI.cpp" />
+    <ClCompile Include="MergesortTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Mergesort1.h" />
     <ClInclude Include="MergesortCTCI.h" />
+    <ClInclude Include="MergesortTemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
