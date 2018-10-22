@@ -12,6 +12,7 @@ Program to play with sets and maps, both ordered and unordered.
 
 int main(int argc, char* argv[])
 {
+    //=======================================================================================================
     std::set<int> ints;
     ints.insert(1);
     ints.insert(2);
@@ -73,7 +74,22 @@ int main(int argc, char* argv[])
 
     size_t letterHash = std::hash<std::string>()("a");
     std::cout << "Hash of \"a\": " << letterHash << std::endl;
+    //=======================================================================================================
 
+
+
+    //=======================================================================================================
+    //duplicate value test in unordered_multimap
+    std::unordered_multimap<int, std::string> myMap;
+    std::string value = "dup_val";
+    myMap.insert(std::pair<int, std::string>(12, value));
+    myMap.insert(std::pair<int, std::string>(12, value));
+    std::cout << "Elements in multimap:" << std::endl;
+    for (auto elem : myMap)
+    {
+        std::cout << "Key: " << elem.first << "   Value: " << elem.second << std::endl;
+    }
+    //=======================================================================================================
 
     //pause console to read output
     std::cin.get();
