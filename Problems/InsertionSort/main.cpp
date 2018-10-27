@@ -20,7 +20,7 @@ Worst: O(n^2)
 Best: O(n)
 
 Space complexity:
-Worst: O(n)
+Worst: O(1)
 
 */
 

@@ -51,6 +51,9 @@
     <ProjectReference Include="..\RadixSort\RadixSort.vcxproj">
       <Project>{a5c329a9-8ee8-4751-9e1f-503ee09c8a5d}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\SelectionSort\SelectionSort.vcxproj">
+      <Project>{af805c63-6790-49f3-a0ba-37bc8195a1a9}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.vcxproj">
       <Project>{37a722e5-a64e-472b-aa32-8e435c148940}</Project>
     </ProjectReference>
@@ -73,7 +76,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\QuickSort;..\MergeSort;..\RadixSort;..\InsertionSort;..\BubbleSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\QuickSort;..\MergeSort;..\RadixSort;..\InsertionSort;..\SelectionSort;..\BubbleSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

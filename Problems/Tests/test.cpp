@@ -16,8 +16,9 @@ against it
 
 #include "Radixsort.h"
 
-#include "Bubblesort.h"
 #include "Insertionsort.h"
+#include "Selectionsort.h"
+#include "Bubblesort.h"
 
 //How to write a set of test cases that I can use to test all implementations
 //of a specific algorithm? For example, I might write 8 quicksort implementations,
@@ -147,3 +148,6 @@ INSTANTIATE_TYPED_TEST_CASE_P(unique_label_btests, SortTest, BubblesortTypes);
 
 typedef ::testing::Types<Insertionsort> InsertionsortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_itests, SortTest, InsertionsortTypes);
+
+typedef ::testing::Types<Selectionsort> SelectionsortTypes;
+INSTANTIATE_TYPED_TEST_CASE_P(unique_label_stests, SortTest, SelectionsortTypes);
