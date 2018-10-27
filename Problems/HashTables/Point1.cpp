@@ -3,6 +3,7 @@
     requiring user defined hashing functions.
 
 Sources:
+https://stackoverflow.com/questions/17016175/c-unordered-map-using-a-custom-class-type-as-the-key
 http://www.drdobbs.com/windows/user-defined-hash-functions-for-unordere/231600210?pgno=1
 ******************************************************************************/
 #include "Point1.h"
