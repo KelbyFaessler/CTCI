@@ -30,6 +30,9 @@
     <ClInclude Include="RadixsortBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BubblesortBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RadixsortBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BubblesortBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

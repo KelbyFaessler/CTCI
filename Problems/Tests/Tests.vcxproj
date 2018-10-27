@@ -36,6 +36,9 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BubbleSort\BubbleSort.vcxproj">
+      <Project>{8a2adf19-674a-42dc-ba82-56dd63c3614c}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MergeSort\MergeSort.vcxproj">
       <Project>{65d0ee05-02b3-46fc-ac7a-fe15d563e326}</Project>
     </ProjectReference>
@@ -67,7 +70,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\QuickSort;..\MergeSort;..\RadixSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\QuickSort;..\MergeSort;..\RadixSort;..\BubbleSort;..\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
