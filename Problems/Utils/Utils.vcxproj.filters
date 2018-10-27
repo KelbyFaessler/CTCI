@@ -33,6 +33,9 @@
     <ClInclude Include="BubblesortBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InsertionsortBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BubblesortBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertionsortBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
