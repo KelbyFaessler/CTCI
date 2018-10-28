@@ -120,6 +120,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Quicksort1.cpp" />
     <ClCompile Include="Quicksort2.cpp" />
+    <ClCompile Include="Quicksort3.cpp" />
     <ClCompile Include="QuicksortCTCI.cpp" />
     <ClCompile Include="QuicksortLom.cpp" />
     <ClCompile Include="QuicksortLomStd.cpp" />
@@ -128,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="Quicksort1.h" />
     <ClInclude Include="Quicksort2.h" />
+    <ClInclude Include="Quicksort3.h" />
     <ClInclude Include="QuicksortCTCI.h" />
     <ClInclude Include="QuicksortLom.h" />
     <ClInclude Include="QuicksortLomStd.h" />
