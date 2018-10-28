@@ -18,9 +18,13 @@ Partition schemes:
 case time when array is already sorted.
 2. Hoare partition scheme: 
 
-Runtimes:
+Runtime complexities:
 Avg: O(nlogn)
 Worst: O(n^2), unless particular modifications are made
+
+Space complexities:
+Avg: O(logn) via the call stack
+Worst: O(n)  via the call stack in worst case unless algorithm is modified/optimized
 
 Cases where quicksort does not perform well:
 1. Array that is already sorted O(n^2) (unless algorithm is modified appropriately)

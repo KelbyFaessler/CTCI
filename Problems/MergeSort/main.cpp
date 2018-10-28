@@ -38,10 +38,18 @@ Comparisons to other sorting algorithms:
 #include <string>
 #include <vector>
 
+#include "Mergesort2.h"
+#include "Utils.h"
 
 int main(int argc, char* argv[])
 {
     //Don't actually need anything in main here right now
+    std::vector<int> vecEven = { 4, 55, 1, 78, 23, 34, 66, 29 };
+    outputVector(vecEven, "Vec before sort");
+    Mergesort2 sorter;
+    sorter.sort(vecEven);
+    outputVector(vecEven, "Vec after sort");
+
 
     //keep console open
     std::cin.get();

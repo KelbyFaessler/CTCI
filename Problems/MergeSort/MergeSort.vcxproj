@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)Debug\Utils.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -114,12 +117,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mergesort2.cpp" />
     <ClCompile Include="Mergesort1.cpp" />
     <ClCompile Include="MergesortCTCI.cpp" />
     <ClCompile Include="MergesortTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mergesort1.h" />
+    <ClInclude Include="Mergesort2.h" />
     <ClInclude Include="MergesortCTCI.h" />
     <ClInclude Include="MergesortTemplate.h" />
   </ItemGroup>

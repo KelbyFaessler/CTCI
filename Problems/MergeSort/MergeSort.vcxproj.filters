@@ -27,6 +27,9 @@
     <ClCompile Include="Mergesort1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mergesort2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MergesortCTCI.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mergesort1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mergesort2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

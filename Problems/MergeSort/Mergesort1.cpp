@@ -1,8 +1,4 @@
 /******************************************************************************
-* Description: Provides an empty skeleton as a starting point for mergesort
-* implemenation practice.
-*
-* Comment for implementation: (delete this line + everything above, keep below)
 * Description: Implementation of the mergesort algorithm; practice attempt #1.
 ******************************************************************************/
 #include "Mergesort1.h"
