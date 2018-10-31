@@ -11,10 +11,12 @@ against it
 #include "Quicksort1.h"
 #include "Quicksort2.h"
 #include "Quicksort3.h"
+#include "Quicksort4.h"
 
 #include "MergesortCTCI.h"
 #include "Mergesort1.h"
 #include "Mergesort2.h"
+#include "Mergesort3.h"
 
 #include "Radixsort.h"
 
@@ -141,10 +143,11 @@ typedef ::testing::Types<QuicksortLom,
     QuicksortCTCI,
     Quicksort1,
     Quicksort2,
-    Quicksort3> QuicksortTypes;
+    Quicksort3,
+    Quicksort4> QuicksortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_qtests, SortTest, QuicksortTypes);
 
-typedef ::testing::Types<MergesortCTCI, Mergesort1, Mergesort2> MergesortTypes;
+typedef ::testing::Types<MergesortCTCI, Mergesort1, Mergesort2, Mergesort3> MergesortTypes;
 INSTANTIATE_TYPED_TEST_CASE_P(unique_label_mtests, SortTest, MergesortTypes);
 
 typedef ::testing::Types<Radixsort> RadixsortTypes;
