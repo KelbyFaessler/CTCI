@@ -11,9 +11,9 @@ public:
     AdjList();
     ~AdjList();
 
-    void AddNode();
+    void AddEdge(int fromNode, int toNode, int weight);
     void PrintNodes();
 
 private:
-    std::vector<std::vector<int>> nodes;
+    std::vector<std::vector<std::pair<int, int>>> nodes;
 };
