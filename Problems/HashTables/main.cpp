@@ -7,6 +7,7 @@ Project to practice using STL hash tables. Specifically, can practice:
 
 #include "Point1.h"
 #include "Point2.h"
+#include "Point3.h"
 
 #include <iostream>
 
@@ -17,8 +18,9 @@ int main(int argc, char* argv[])
 
     //Now, add function call to main that uses these 4 methods on new
     //class
-    Test_Point1();
-    Test_Point2();
+    //Test_Point1();
+    //Test_Point2();
+    Test_Point3();
 
 
 

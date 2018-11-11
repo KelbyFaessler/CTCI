@@ -32,12 +32,6 @@ bool Point1::operator==(const Point1 & other) const
             (getY() == other.getY()));
 }
 
-size_t point1Hash(const Point1& p1)
-{
-    std::hash<int> intHasher;
-    return intHasher(p1.getX()) ^ intHasher(p1.getY());
-}
-
 /*
 Different methods to use user defined class as hash table key:
 You need to define two things: a hash function for the user class, and the == operator

@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{5F7984B8-631E-45F2-8BB5-73389EE29243}</ProjectGuid>
-    <RootNamespace>HashTables</RootNamespace>
+    <ProjectGuid>{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}</ProjectGuid>
+    <RootNamespace>Misc</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,18 +116,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Point2.cpp" />
-    <ClCompile Include="Point3.cpp" />
-    <ClCompile Include="PointBase.cpp" />
-    <ClCompile Include="Point1.cpp" />
-    <ClCompile Include="PointTemplate.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Point1.h" />
-    <ClInclude Include="Point2.h" />
-    <ClInclude Include="Point3.h" />
-    <ClInclude Include="PointBase.h" />
-    <ClInclude Include="PointTemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hashmaps", "hashmaps\hashma
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConstTests", "ConstTests\ConstTests.vcxproj", "{0E87A317-EFD6-46EA-B415-B252F300E9BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Misc", "Misc\Misc.vcxproj", "{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x64.Build.0 = Release|x64
 		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x86.ActiveCfg = Release|Win32
 		{0E87A317-EFD6-46EA-B415-B252F300E9BA}.Release|x86.Build.0 = Release|Win32
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Debug|x64.ActiveCfg = Debug|x64
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Debug|x64.Build.0 = Debug|x64
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Debug|x86.ActiveCfg = Debug|Win32
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Debug|x86.Build.0 = Debug|Win32
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Release|x64.ActiveCfg = Release|x64
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Release|x64.Build.0 = Release|x64
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Release|x86.ActiveCfg = Release|Win32
+		{04FC3AF6-AFC4-46F7-8E56-28E7FFDDD7BB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
